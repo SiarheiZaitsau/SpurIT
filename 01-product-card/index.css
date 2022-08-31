@@ -1,0 +1,182 @@
+/* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f6f6f6;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 32px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.cards__title {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 72px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.cards__list {
+  display: flex;
+  list-style: none;
+}
+.card {
+  position: relative;
+  height: 482px;
+  width: calc(33.33% - (20px * 2 / 3));
+  border-radius: 12px;
+  margin-right: 20px;
+  overflow: hidden;
+}
+.card:last-child {
+  margin-right: 0;
+}
+.card__image {
+  height: 214px;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.statuses {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+}
+.status {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 0 16px;
+  border-radius: 8px;
+}
+.statuses__status {
+  margin-right: 17px;
+}
+.statuses__status:last-child {
+  margin-right: 0;
+}
+.status_new {
+  background-color: #fdcff3;
+}
+.status_last {
+  background-color: #ffcf56;
+}
+.card__content {
+  padding: 24px;
+  background: #fff;
+  height: 268px;
+  display: flex;
+  flex-direction: column;
+}
+.card__title {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 36px;
+  margin-bottom: 16px;
+}
+.card__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+.card__button {
+  margin-top: auto;
+}
+.button {
+  background: transparent;
+  width: 100%;
+  height: 48px;
+  border: 2px solid #42940f;
+  color: #42940f;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+.card__button:hover {
+  background: #42940f;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.card__button:active {
+  background: #1f5200;
+  color: #fff;
+}
+.card__button:disabled {
+  background: #4e4e4e;
+  color: #fff;
+  border: 2px solid #4e4e4e;
+  cursor: auto;
+}
+@media (max-width: 1024px) {
+  .cards__list {
+    flex-wrap: wrap;
+  }
+  .card {
+    width: calc(50% - (20px / 2));
+    margin-bottom: 20px;
+  }
+  .card:nth-child(even) {
+    margin-right: 0;
+  }
+  .card:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+  @media (max-width: 768px) {
+    .cards {
+      padding: 32px 16px;
+    }
+    .cards__title {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 48px;
+      margin-bottom: 24px;
+    }
+    .card {
+      width: 100%;
+      margin-right: 0;
+    }
+    .card:nth-last-child(-n + 2) {
+      margin-bottom: 20px;
+    }
+    .card:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @media (max-width: 380px) {
+    .cards__title {
+      margin-bottom: 20px;
+    }
+    .card__title {
+      line-height: 24px;
+    }
+    .card__text {
+      max-height: 100px;
+    }
+    .cards {
+      padding: 16px;
+    }
+    .statuses {
+      flex-direction: column;
+    }
+    .statuses__status {
+      margin-bottom: 8px;
+    }
+    .statuses__status:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
