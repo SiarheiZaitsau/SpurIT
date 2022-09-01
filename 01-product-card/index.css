@@ -8,21 +8,21 @@ body {
   background-color: #f6f6f6;
   font-family: Arial, Helvetica, sans-serif;
 }
-.cards {
+.products {
   display: flex;
   flex-direction: column;
   padding: 40px 32px;
   max-width: 1180px;
   margin: 0 auto;
 }
-.cards__title {
+.products__title {
   font-size: 48px;
   font-weight: 900;
   line-height: 72px;
   text-align: center;
   margin-bottom: 40px;
 }
-.cards__list {
+.products__list {
   display: flex;
   list-style: none;
 }
@@ -122,7 +122,7 @@ body {
   cursor: auto;
 }
 @media (max-width: 1024px) {
-  .cards__list {
+  .products__list {
     flex-wrap: wrap;
   }
   .card {
@@ -157,7 +157,7 @@ body {
     }
   }
   @media (max-width: 380px) {
-    .cards__title {
+    .products__title {
       margin-bottom: 20px;
     }
     .card__title {
