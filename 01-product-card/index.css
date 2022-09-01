@@ -106,16 +106,16 @@ body {
   text-align: center;
   cursor: pointer;
 }
-.card__button:hover {
+.button:hover {
   background: #42940f;
   color: #fff;
   transition: all 0.3s ease;
 }
-.card__button:active {
+.button:active {
   background: #1f5200;
   color: #fff;
 }
-.card__button:disabled {
+.button:disabled {
   background: #4e4e4e;
   color: #fff;
   border: 2px solid #4e4e4e;
